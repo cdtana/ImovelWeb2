@@ -27,7 +27,7 @@ class CorretorController extends Controller
      */
     public function create()
     {
-        //
+        return view('corretores.create');
     }
 
     /**
@@ -38,7 +38,8 @@ class CorretorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Corretor::create($request->all());
+        return redirect ()-> route('corretores.index');
     }
 
     /**

@@ -20,7 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Rotas das tabelas
-Route::get('/corretores','CorretorController@index')->name('corretores.index');
+//Route::get('/corretores','CorretorController@index')->name('corretores.index');
+Route::resource('corretores','CorretorController');
 Route::get('/proprietarios','ProprietariosController@index')->name('proprietarios.index');
 Route::get('/imoveis','ImoveisController@index')->name('imoveis.index');
 Route::get('/inquilinos','InquilinosController@index')->name('inquilinos.index');
